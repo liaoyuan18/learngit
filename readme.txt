@@ -18,3 +18,26 @@ git checkout -b dev     创建一个叫dev的分支，并把它设置为HEAD,等
     git checkout dev
 
 
+git checkout master     切换到master分支
+git merge dev           合并master到dev
+
+关于分支的操作
+
+Git鼓励大量使用分支：
+
+查看分支：git branch
+
+创建分支：git branch <name>
+
+切换分支：git checkout <name>
+
+创建+切换分支：git checkout -b <name>
+
+合并某分支到当前分支：git merge <name>
+
+删除分支：git branch -d <name>
+
+
+
+
+创建了feature分支
