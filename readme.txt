@@ -42,3 +42,16 @@ Git鼓励大量使用分支：
 
 
 创建了feature分支
+
+1.创建分支  
+git checkout -b feature
+2.修改feature内容,并提交
+3.返回master
+git checkout master
+4.修改master，提交
+5.合并两个分支
+git merge feature
+6.提示无法合并，到指定文件下手动合并
+7.add   commit  到master（当前）
+8.删除feature
+git branch -d feature
