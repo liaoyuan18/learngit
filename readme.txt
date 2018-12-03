@@ -55,3 +55,33 @@ git merge feature
 7.add   commit  到master（当前）
 8.删除feature
 git branch -d feature
+
+
+
+
+
+
+合并分支时，加上--no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。
+
+
+
+
+
+bug分支
+场景：你正在写dev分支，领导让你修复一个代号为101的bug，你必须放下当前的工作取抢修bug
+操作：
+1.保存当前的工作环境
+    git stash
+2.切换的有bug的master分支
+    git checkout master
+3.新建一个分支用于修复bug101
+    git checkout -b issue101
+4.修复完成bug，add commit后返回master然后合并
+    git checkout master
+    git merge --no-ff -m "修复完了bug" issue101
+5.还原最初的工作环境
+    git stash list
+    git stash pop <>   这一句可以分为两句git stash apply <>  git stash drop <>
+
+
+## 学习到多人协作部分，有些障碍，暂停学习。
